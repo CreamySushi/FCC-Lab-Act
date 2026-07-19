@@ -30,9 +30,9 @@ function isLeapYear(year) {
   let divisibleByFour;
 
   if (lastTwoDigits === 0) {
-    divisibleByFour = yearString.slice(1, 3) / 4;
+    divisibleByFour = yearString.slice(1, 3) % 4;
   } else {
-    divisibleByFour = lastTwoDigits / 4;
+    divisibleByFour = lastTwoDigits % 4;
   }
 
   if (divisibleByFour !== 0) {
@@ -45,3 +45,5 @@ function isLeapYear(year) {
 let year = 2240;
 const result = isLeapYear(year);
 console.log(result);
+// 2240 is a leap year
+// 1900 is not a leap year
